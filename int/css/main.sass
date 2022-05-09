@@ -1,0 +1,238 @@
+\:root
+    --white: #ffffff
+    --slide-bg: #232831
+    --slide-contentbg: #0459a2
+    --body-bg: #ccc
+
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+*
+    margin: 0
+    padding: 0
+
+html
+    font-size: 16px
+
+body
+    font-size: 16px
+    line-height: 1.4
+    font-weight: normal
+    font-family: 'Open Sans', sans-serif
+    background-color: var(--body-bg)
+    color: var(--white)
+
+.slide
+    position: relative
+    background-color: var(--slide-bg)
+    margin-bottom: .3rem
+    overflow: hidden
+    padding-bottom: 2rem
+
+    &:after
+        content: ""
+        background: url("../img/logo.svg") no-repeat center
+        background-size: 2300px
+        width: 2300px
+        height: 2300px
+        position: absolute
+        top: -95px
+        left: -500px
+        opacity: .03
+        z-index: 99
+
+    &--number
+        position: absolute
+        right: 70%
+        bottom: -2.8rem
+        font-size: 365px
+        line-height: 1
+        color: rgba(#fff, .1)
+        z-index: 101
+
+    &--logo
+        position: absolute
+        left: 2rem
+        bottom: 1rem
+        height: 2.9rem
+        width: auto
+        z-index: 102
+
+    &--container
+        width: 1380px
+        margin-left: auto
+        margin-right: auto
+        min-height: 735px
+        display: flex
+        align-items: flex-start
+
+    &--title__box
+        margin-bottom: 2.5rem
+
+    &--title
+        font-size: 2rem
+        line-height: 1.1
+        margin-bottom: .5rem
+        text-transform: uppercase
+
+    &--subtitle
+        font-size: 1.4rem
+        margin-bottom: 0
+
+    &--content-title
+        font-size: 1.4rem
+        text-transform: uppercase
+        font-weight: bold
+        margin-bottom: 1rem
+        margin-top: 2rem
+
+    &--sidebar
+        width: 30%
+        padding: 2rem 2rem 5rem
+
+    &--content
+        width: 70%
+        min-height: 702px
+        background-color: var(--slide-contentbg)
+        padding: 4rem 2rem 2rem
+
+    &--text
+        margin-bottom: 1.5rem
+        line-height: 1.6
+
+    &--list
+        list-style-type: none
+        position: relative
+        z-index: 103
+
+        & > li
+            margin-bottom: .5rem
+            font-size: .9rem
+
+    &--list__column
+        list-style-type: none
+        display: flex
+        flex-wrap: wrap
+
+        & > li
+            margin-bottom: 1rem
+
+        & > li:nth-child(2n+1)
+            width: 30%
+            flex: 0 0 auto
+            font-weight: bold
+            padding-right: 1rem
+
+        & > li:nth-child(2n+2)
+            width: 70%
+            flex: 0 0 auto
+
+    &--contact-text
+        margin-top: 130px
+        width: 100%
+        line-height: 1.2
+
+        &--title
+            font-size: 4rem
+            font-weight: bold
+            text-align: center
+            text-transform: uppercase
+
+            small
+                text-transform: none
+                display: block
+                font-size: 2rem
+
+.visit-card
+    position: absolute
+    right: 0
+    bottom: 2rem
+    background-color: var(--slide-contentbg)
+    padding: 3rem 2rem
+    display: flex
+    justify-content: center
+    flex-direction: column
+    width: 40%
+    overflow: hidden
+
+    &--text
+        position: absolute
+        bottom: -8px
+        right: .5rem
+        font-size: 70px
+        line-height: 1
+        opacity: .1
+        z-index: 96
+        text-transform: uppercase
+
+    &--name
+        font-size: 1.5rem
+        font-weight: bold
+        text-align: center
+
+    &--position
+        display: block
+        text-align: center
+        margin-bottom: 1.5rem
+
+    .social-list
+        list-style-type: none
+
+        li
+            position: relative
+            padding-left: 30px
+
+            & + li
+                margin-top: .2rem
+
+        &--icon
+            height: 1.4rem
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+
+.grid-box
+    display: flex
+    flex-wrap: wrap
+    margin-top: calc(-1 * .5rem)
+    margin-right: calc(-0.5 * .5rem)
+    margin-left: calc(-0.5 * .5rem)
+
+    &--column
+        flex-shrink: 0
+        width: 100%
+        max-width: 100%
+        height: 100%
+        padding-right: calc(.5rem * 0.5)
+        padding-left: calc(.5rem * 0.5)
+        margin-top: .5rem
+
+        &__6
+            width: 50%
+            flex: 0 0 auto
+
+        &__number
+            position: absolute
+            right: 1.5rem
+            bottom: -11px
+            font-size: 100px
+            line-height: 1
+            color: rgba(#fff, .1)
+            z-index: 100
+
+    &__text
+        position: relative
+        z-index: 101
+
+    &--content
+        border: 1px solid rgba(#fff, .3)
+        min-height: 170px
+        padding: 1rem 1.8rem
+        display: flex
+        align-items: center
+        position: relative
+        overflow: hidden
+
